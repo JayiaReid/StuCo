@@ -1,0 +1,25 @@
+#notes{
+    position: fixed;
+    margin-top: 120px;
+    margin-left: -305px;
+    height: auto;
+    width: 400px;
+    padding: 5vh;
+    border-radius: 10px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px #f8f8f85a;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 3;
+}
+
+#noteslist{
+    /* margin-left: 15px;
+    margin-top: 5px; */
+}
+
+.addNote textarea{
+    color: black;
+}

@@ -1,0 +1,27 @@
+
+
+/* stopwatch timer */
+#timer {
+    top: 20vh; 
+    text-align: center;
+    position: fixed;
+    left: 50%; 
+    transform: translateX(-50%); 
+}
+
+#timer .display {
+    color: rgb(0, 0, 0);
+    font-size: 3.5em;
+    text-shadow: 2px 2px 2px #000000; border-radius: 2%;
+}
+
+#timer {
+    margin-top:30vh;
+    text-align: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+}
+
+
+

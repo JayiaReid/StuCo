@@ -1,0 +1,143 @@
+#main{
+    transform-origin: center;
+    
+}
+#planet{
+    margin-top: 5%;
+    display: inline-block;
+    position: fixed;
+    height: 500px;
+    width: 500px;
+    margin-left: 25vh;
+    border:none;
+    border-radius: 50%;
+    box-shadow:
+        0 0 5em 0 #ffc400a2,
+        0 0 20em 4em #fb8a0033,
+        0 0 55em #f7cfcf1a;
+    position: relative;
+    background-color: #ffc400;
+    display: flex;
+    align-items: center;
+}
+
+#satel, #satel::after{
+    content:"";
+    position: absolute;
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+}
+#satel{
+    background: rgb(74, 74, 74);
+    box-shadow: -2em 0 5em -1em white;
+    overflow: hidden;
+    transition: 250ms;
+    left: 32em;
+    transform: rotate(20deg);
+    animation: round 5s infinite ease-in-out;
+}
+
+#satel::after{
+    background: #1e1e1e;
+    width: 2.5em;
+    left: 2.5em;
+    box-shadow: 0 0 0.75em 0.95em  #1e1e1e;
+    animation: shadow 5s infinite ease-in-out;
+}
+
+@keyframes shadow{
+    0%{
+        width: 2.5em;
+        left:0;
+    }
+    25%{
+        width: 5em;
+        left: 0;
+    }
+    50%{
+        width: 2.5em;
+        left: 2.5em;
+    }
+    75%{
+        width: 0em;
+        left: 5em;
+    }
+    80%{
+        left: 0;
+        box-shadow: 0 0 0.55em 0.75em #1e1e1e;
+    }
+    100%{
+        width: 2.5em;
+        left: 0;
+    }
+}
+
+@keyframes round{
+    0%, 
+    100%{
+        top: 2em;
+        left: -15em;
+        box-shadow: -2em 0 5em 0.5em #c6836466;
+        z-index: 2;
+    }
+    25%{
+        box-shaodw: 0 0 3em 1em #412104b5;
+    }
+    75%{
+        box-shaodw: 0 0 3em 1em black;
+    }
+    48%{
+        z-index: 2;
+    }
+    50%{
+        left: 40em;
+        top: 20em;
+        z-index: -1;
+        box-shadow: 2em 0 5em 0.5em #845a4682;
+    }
+    99%{
+        z-index: -1;
+    }
+}
+
+/* #ptimer {
+    margin-top:24vh;
+    text-align: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+}
+#ptimer h2{
+    color: #54f7f8; 
+}
+#ptimer .display {
+    color: rgb(0, 0, 0);
+    font-size: 3.5em;
+    text-shadow: 2px 2px 2px #54f7f8;
+    background-color: white;
+    border-radius: 2%;
+} */
+
+.controls {
+    display: inline-block;
+    padding: 1.2em;
+    background-color: rgba(255, 255, 255, 0);
+    width: 23vh;
+    border-radius: 5%;
+    text-align: center;
+    align-items: center;
+}
+
+.controls img {
+    width: auto;
+    height: 40px;
+    margin-right: 15px;
+}
+
+#StudyTimer {
+    display: flex;
+    position: relative;
+    flex-direction: column; 
+    align-items: center; /* horizontally center items */
+}

@@ -1,0 +1,43 @@
+#conv{
+    padding: 10px;
+    border-radius: 3%;
+    width: auto;
+    max-width: 25%;
+    height: auto;
+    /* background-color: white; */
+    padding: 1.5em;
+    text-align: center;
+    position: absolute;
+    box-shadow: 0 0 20px #f8f8f85a;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 3;
+}
+#conv select option{
+    background-color: black;
+}
+#conv select, input{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 0.5em;
+    margin-bottom: 5px;
+    font-size: 1em;
+}
+
+#conv select{
+    text-align: center;
+    width: 200px;
+    
+}
+
+#conv input{
+    width: 185px;
+}
+
+#conv_to, #conv_from{
+    color: black;
+}
+
+#conv_type_p{
+    color: black;
+}

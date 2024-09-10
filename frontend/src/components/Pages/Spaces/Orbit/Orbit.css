@@ -1,0 +1,99 @@
+#orbit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#loader{
+    background:
+    conic-gradient(from 0deg at 50% 50%,
+    #26fbfb 0%,
+    #a9ffff 50%,
+    #000000 50%);
+    height: 500px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 50%;
+    /* padding: 1em; */
+    /* position: absolute;
+    top: 200px;
+    left: 50px; */
+    margin-top: 50px;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg) ;
+    }
+}
+
+#l_content{
+    background-color: black;
+    height: 495px;
+    width: 495px;
+    border-radius: 50%;
+    content: " ";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: spin 1s infinite linear reverse;
+}
+
+.l_stop{
+    animation: 0s;
+}
+
+#ptimer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    overflow-y: auto;
+}
+#ptimer h2{
+    color: #54f7f8; 
+}
+#ptimer .display {
+    color: white;
+    font-size: 3.5em;
+    text-shadow: 2px 1px 3px #ffffff;
+}
+
+.controls {
+    display: flex;
+    padding: 1.2em;
+    border-radius: 5%;
+    text-align: center;
+    align-items: center;
+}
+
+.controls img {
+    width: auto;
+    height: 40px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.controls img:hover{
+    transform: scale(1.1);
+}
+
+/* #StudyTimer {
+    display: flex;
+    position: relative;
+    flex-direction: column; 
+    align-items: center; 
+} */
