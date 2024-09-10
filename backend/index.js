@@ -27,6 +27,9 @@ app.use(cors({
     methods: ["POST", "GET"],
     credentials: true
 }));
+
+app.options('*', cors());
+
 app.use(cookieParser())
 app.use(session({
     secret: secretKey,
