@@ -44,9 +44,3 @@ function App() {
 }
 
 export default App;
-
-// to do:
-// save notes and to do lists in database
-//profile to show last logged in 
-// notes app
-// link to python utlities

@@ -51,7 +51,7 @@ export default function Login({onLogin}){
             console.log("error");
             }else{
             // console.log(userID, passwrd);
-            axios.post("http://localhost:5170/login", { 
+            axios.post("https://stu-co.vercel.app/login", { 
             userID: userID, 
             passwrd: passwrd
             })
@@ -82,7 +82,7 @@ export default function Login({onLogin}){
                 console.log("error");
             }else{
                 console.log(full_name, DOB, passwrd);
-                axios.post("http://localhost:5170/login-2", { 
+                axios.post("https://stu-co.vercel.app/login-2", { 
                 full_name: full_name, 
                 DOB: DOB,
                 passwrd: passwrd,

@@ -26,7 +26,7 @@ export default function Notes(props) {
         const noteContent = newNote.trim();
         if (!noteContent) return; 
 
-        axios.post('http://localhost:5170/api/add-note', {noteID: noteId, noteTitle: userInput, content: noteContent})
+        axios.post('https://stu-co.vercel.app/api/add-note', {noteID: noteId, noteTitle: userInput, content: noteContent})
         .then(response=>{
             console.log("note added")
             setNotes(n => [...n, { noteID: noteId, noteTitle: userInput, content: noteContent }]);
@@ -37,7 +37,7 @@ export default function Notes(props) {
     }
 
     function deleteNote(noteID) {
-        axios.post("http://localhost:5170/api/delete-note", { noteID: noteID })
+        axios.post("https://stu-co.vercel.app/api/delete-note", { noteID: noteID })
             .then(response => {
                 console.log("Note deleted successfully");
                 const updatedNotes = notes.filter(note => note.noteID !== noteID);
@@ -50,7 +50,7 @@ export default function Notes(props) {
 
     const getSavedNotes=()=>{
 
-        axios.get('http://localhost:5170/api/get-notes')
+        axios.get('https://stu-co.vercel.app/api/get-notes')
         .then((result)=>{
             setNotes(result.data)
         }).catch(error =>{

@@ -50,7 +50,7 @@ export default function SignUp(){
 
             // setUserID(generateUserID)
 
-            axios.post("http://localhost:5170/sign-up", 
+            axios.post("https://stu-co.vercel.app/sign-up", 
         {
             userID: userID,
             f_name: f_name,

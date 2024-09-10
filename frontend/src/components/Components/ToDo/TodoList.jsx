@@ -31,7 +31,7 @@ export default function TodoList({inputBg}){
             const taskContent = newTask.trim();
             
             // Send task data to backend
-            axios.post('http://localhost:5170/api/add-task', { taskID: taskId, content: taskContent })
+            axios.post('https://stu-co.vercel.app/api/add-task', { taskID: taskId, content: taskContent })
                 .then(response => {
                     console.log('Task added successfully:', response.data);
                     // Update local state with the newly added task
@@ -47,7 +47,7 @@ export default function TodoList({inputBg}){
 
     function deleteTask(taskID){
 
-        axios.post("http://localhost:5170/api/delete-task", {TaskID: taskID})
+        axios.post("https://stu-co.vercel.app/api/delete-task", {TaskID: taskID})
         .then(response=>{
             // console.log("task deleted sucessfully")
             const updatedTasks = tasks.filter(task => task.taskID !== taskID );
@@ -60,7 +60,7 @@ export default function TodoList({inputBg}){
 
     const getSavedTasks=()=>{
 
-        axios.get('http://localhost:5170/api/get-tasks')
+        axios.get('https://stu-co.vercel.app/api/get-tasks')
         .then((result)=>{
             setTasks(result.data)
         }).catch(error =>{

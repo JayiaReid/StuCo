@@ -18,7 +18,7 @@ function System(){
     const [name, setName]=useState('');
     axios.defaults.withCredentials = true;
     useEffect(()=>{
-        axios.get('http://localhost:5170').then(
+        axios.get('https://stu-co.vercel.app').then(
             (response)=>{
                 if(response.data.valid){
                     console.log(response.data)
